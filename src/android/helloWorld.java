@@ -24,6 +24,17 @@ public class helloWorld extends CordovaPlugin {
     }
 
     private void showMessage(CallbackContext callback){
-         callback.success("HELLO WORLD !!!!!");            
+    
+         cordova.getThreadPool().execute(new Runnable({
+              public void run(){
+                     for(int i=0; i < 10;i++)
+                     {
+                         try{
+                            Thread.sleep(1000);
+                         }catch(InterruptedException ie){}
+                     }       
+                callback.success("HELLO WORLD !!!!!");
+              }
+         }));            
     }
 }
