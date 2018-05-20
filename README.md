@@ -1,0 +1,2 @@
+# HelloWorldIonic
+Cordova plugin 
