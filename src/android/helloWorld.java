@@ -24,6 +24,6 @@ public class helloWorld extends CordovaPlugin {
     }
 
     private void showMessage(CallbackContext callback){
-         callback.succes("HELLO WORLD !!!!!");            
+         callback.success("HELLO WORLD !!!!!");            
     }
 }
