@@ -1,5 +1,5 @@
 public class helper {
-    this.mesaj;
+    public String mesaj;
     helper(String mesaj1)
     {
       this.mesaj = mesaj1;

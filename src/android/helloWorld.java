@@ -25,7 +25,7 @@ public class helloWorld extends CordovaPlugin {
 
     private void showMessage(CallbackContext callback){
     
-         cordova.getThreadPool().execute(new Runnable({
+         cordova.getThreadPool().execute(new Runnable(){
               public void run(){
                      for(int i=0; i < 10;i++)
                      {
@@ -35,6 +35,6 @@ public class helloWorld extends CordovaPlugin {
                      }       
                 callback.success(h.getMesaj());
               }
-         }));            
+         });            
     }
 }
