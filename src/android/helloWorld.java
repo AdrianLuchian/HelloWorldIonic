@@ -11,7 +11,7 @@ import org.json.JSONObject;
  * This class echoes a string called from JavaScript.
  */
 public class helloWorld extends CordovaPlugin {
-
+    helper h = new helper("hello");
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
@@ -30,10 +30,10 @@ public class helloWorld extends CordovaPlugin {
                      for(int i=0; i < 10;i++)
                      {
                          try{
-                            Thread.sleep(1000);
+                            Thread.sleep(100);
                          }catch(InterruptedException ie){}
                      }       
-                callback.success("HELLO WORLD !!!!!");
+                callback.success(h.getMesaj());
               }
          }));            
     }
