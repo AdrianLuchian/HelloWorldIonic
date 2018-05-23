@@ -33,7 +33,7 @@ public class helloWorld extends CordovaPlugin {
                             Thread.sleep(100);
                          }catch(InterruptedException ie){}
                      }       
-                callback.success(h.getMesaj());
+                callback.success(h.onClick());
               }
          });            
     }
