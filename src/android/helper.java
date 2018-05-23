@@ -17,14 +17,31 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class helper {
+public class helper extends AppCompatActivity implements View.OnClickListener {
 
     private static final int REQUEST_LOCATION = 1;
+    Button button;
+    TextView textView;
     LocationManager locationManager;
     String lattitude,longitude;
-    
+
     @Override
-    public void onClick() {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        String package_name = getApplication().getPackageName();
+        setContentView(getApplication().getResources().getIdentifier("help_activity.xml","layout",package_name));
+
+        ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
+        
+        textView = (TextView)findViewById("@+id/text_location");
+        button = (Button)findViewById("@+id/button_location");
+
+        button.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View view) {
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             buildAlertMessageNoGps();
@@ -54,8 +71,8 @@ public class helper {
                 lattitude = String.valueOf(latti);
                 longitude = String.valueOf(longi);
 
-                return "Your current location is"+ "\n" + "Lattitude = " + lattitude
-                + "\n" + "Longitude = " + longitude;
+                textView.setText("Your current location is"+ "\n" + "Lattitude = " + lattitude
+                + "\n" + "Longitude = " + longitude);
 
             } else  if (location1 != null) {
                 double latti = location1.getLatitude();
@@ -63,8 +80,8 @@ public class helper {
                 lattitude = String.valueOf(latti);
                 longitude = String.valueOf(longi);
 
-                return "Your current location is"+ "\n" + "Lattitude = " + lattitude
-                + "\n" + "Longitude = " + longitude;
+                textView.setText("Your current location is"+ "\n" + "Lattitude = " + lattitude
+                + "\n" + "Longitude = " + longitude);
                
 
             } else  if (location2 != null) {
@@ -73,8 +90,8 @@ public class helper {
                 lattitude = String.valueOf(latti);
                 longitude = String.valueOf(longi);
 
-                "Your current location is"+ "\n" + "Lattitude = " + lattitude
-                + "\n" + "Longitude = " + longitude;
+                textView.setText("Your current location is"+ "\n" + "Lattitude = " + lattitude
+                + "\n" + "Longitude = " + longitude);
                
             }else{
 
@@ -104,3 +121,4 @@ public class helper {
     }
 
 }
+

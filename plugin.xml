@@ -15,5 +15,6 @@
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/helloWorld.java" target-dir="src/cordova/plugin/helloWorld/helloWorld" />
         <source-file src="src/android/helper.java" target-dir="src/cordova/plugin/helloWorld/helloWorld" />
+        <source-file src="src/android/help_activity.xml" target-dir="res/layout" />
     </platform>
 </plugin>
