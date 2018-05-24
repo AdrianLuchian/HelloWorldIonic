@@ -18,20 +18,21 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class helper extends AppCompatActivity implements View.OnClickListener {
+public class helper extends AppCompatActivity{
 
-    private static final int REQUEST_LOCATION = 1;
-    Button button;
-    TextView textView;
-    LocationManager locationManager;
-    String lattitude,longitude;
+  private static final int REQUEST_LOCATION = 1;
+  Button button;
+  TextView textView;
+  LocationManager locationManager;
+  String lattitude, longitude;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        String package_name = getApplication().getPackageName();
-        setContentView(getApplication().getResources().getIdentifier("help_activity.xml","layout",package_name));
-        Log.d("nup","MERGE!!");
-    }
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    String package_name = getApplication().getPackageName();
+    setContentView(getApplication().getResources().getIdentifier("help_activity", "layout", package_name));
+    Log.d("nup", "MERGE!!");
+  }
+}
 
 
