@@ -32,7 +32,6 @@ public class helper extends AppCompatActivity implements View.OnClickListener {
         String package_name = getApplication().getPackageName();
         setContentView(getApplication().getResources().getIdentifier("help_activity.xml","layout",package_name));
         Log.d("nup","MERGE!!");
-        ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
     }
 
 
