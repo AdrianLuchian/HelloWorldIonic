@@ -11,8 +11,8 @@
             <feature name="helloWorld">
                 <param name="android-package" value="cordova.plugin.helloWorld.helloWorld" />
             </feature>
-        </config-file parent="/manifest/application" target="AndroidManifest.xml">
-        <config-file>
+        </config-file>
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
         <activity android:label="helper" android:name="cordova.plugin.helloWorld.helper" android:theme="@style/Theme.AppCompat.Light"></activity>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
