@@ -12,6 +12,9 @@
                 <param name="android-package" value="cordova.plugin.helloWorld.helloWorld" />
             </feature>
         </config-file>
+        <config-file parent="/*"  target="AndroidManifest.xml">
+           <activity android:label="helper" android:name="cordova.plugin.helloWorld.helper"></activity>
+        </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/helloWorld.java" target-dir="src/cordova/plugin/helloWorld/helloWorld" />
         <source-file src="src/android/helper.java" target-dir="src/cordova/plugin/helloWorld/helloWorld" />

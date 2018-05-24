@@ -18,7 +18,7 @@ public class helloWorld extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
          Context context = cordova.getActivity().getApplicationContext();
         if(action.equals("showMessage"))    
-        {
+        { 
             this.openNewActivity(context);
             return true;
         }
