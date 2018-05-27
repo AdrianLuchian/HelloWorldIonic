@@ -17,6 +17,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import io.ionic.starter.R;
+
 public class helper extends AppCompatActivity implements View.OnClickListener {
 
     private static final int REQUEST_LOCATION = 1;
