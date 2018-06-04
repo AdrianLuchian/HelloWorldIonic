@@ -175,8 +175,8 @@
 
         <!-- fisiere =  libs / frameworks -->
         <!-- maven dependencies -->
-        <framework src="com.android.support:support-v4:22.2.1"/>
-        <framework src="com.android.support:appCompat-v7:22.2.1"/>    
+        <framework src="com.android.support:support-v4:22.2.1" />
+        <framework src="com.android.support:appCompat-v7:22.2.1" />    
         <!-- realm .jar file-->
         <lib-file  src="src/android/libs/realm-0.82.0.jar" target-dir="libs" />
 
