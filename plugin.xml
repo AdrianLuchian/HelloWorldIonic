@@ -178,7 +178,7 @@
         <framework src="com.android.support:support-v4:22.2.1"/>
         <framework src="com.android.support:appCompat-v7:22.2.1"/>    
         <!-- realm .jar file-->
-        <lib-file  src="src/android/libs/realm-0.82.0.jar" target-dir="libs">
+        <lib-file  src="src/android/libs/realm-0.82.0.jar" target-dir="libs" />
 
         <source-file src="src/android/libs/arm64-v8a/librealm-jni.so" target-dir="jniLibs/arm64-v8a" />
         <source-file src="src/android/libs/armeabi/librealm-jni.so" target-dir="jniLibs/armeabi" />
