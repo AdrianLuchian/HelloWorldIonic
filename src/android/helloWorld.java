@@ -19,14 +19,13 @@ public class helloWorld extends CordovaPlugin {
          Context context = cordova.getActivity().getApplicationContext();
         if(action.equals("showMessage"))
         {
-            Log.d("DA","MERGE");
             this.openNewActivity(context);
             return true;
         }
         return false;
     }
      private void openNewActivity(Context context) {
-        Intent intent = new Intent(context, cordova.plugin.helloWorld.helper.class);
+        Intent intent = new Intent(context, cordova.plugin.helloWorld.disertatie.MainActivity.class);
         this.cordova.getActivity().startActivity(intent);
     }
 /*

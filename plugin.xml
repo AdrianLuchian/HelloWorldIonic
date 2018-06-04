@@ -6,18 +6,187 @@
     <js-module name="helloWorld" src="www/helloWorld.js">
         <clobbers target="helloWorld" />
     </js-module>
+    <!-- Platforma android/ios -->
     <platform name="android">
+        <!-- Pachet -->
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="helloWorld">
                 <param name="android-package" value="cordova.plugin.helloWorld.helloWorld" />
             </feature>
         </config-file>
+       
+        <!-- activitati -->
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
-        <activity android:label="helper" android:name="cordova.plugin.helloWorld.helper" android:theme="@style/Theme.AppCompat.Light"></activity>
+
+        <activity android:label="MainActivity" android:name="cordova.plugin.helloWorld.disertatie.MainActivity" android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity android:label="SettingsActivity" android:name="cordova.plugin.helloWorld.disertatie.SettingsActivity" android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity android:label="BicycleEventsActivity" android:name="cordova.plugin.helloWorld.disertatie.BicycleEventsActivity" android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity android:label="CarEventsActivity" android:name="cordova.plugin.helloWorld.disertatie.CarEventsActivity" android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity android:label="PedestrianEventsActivity" android:name="cordova.plugin.helloWorld.disertatie.PedestrianEventsActivity" android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity android:label="TransportEventsActivity" android:name="cordova.plugin.helloWorld.disertatie.TransportEventsActivity" android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity android:label="EventsActivity" android:name="cordova.plugin.helloWorld.disertatie.EventsActivity" android:theme="@style/Theme.AppCompat.Light"></activity>
+       
         </config-file>
-        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        
+
+        <!-- permisiuni -->
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+           <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+           <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+           <uses-permission android:name="android.permission.GET_TASKS" />
+           <uses-permission android:name="android.permission.INTERNET" />
+           <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+           <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+           <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+           <uses-permission android:name="android.permission.MICROPHONE" />
+           <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+           <uses-permission android:name="android.permission.RECORD_AUDIO" />
+           <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+
+        <!-- serviciu -->
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+        <service android:name="cordova.plugin.helloWorld.disertatie.ListenerService" />
+        </config-file> 
+
+         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <!-- fisiere =  main -->
         <source-file src="src/android/helloWorld.java" target-dir="src/cordova/plugin/helloWorld/helloWorld" />
-        <source-file src="src/android/helper.java" target-dir="src/cordova/plugin/helloWorld/helloWorld" />
-        <source-file src="src/android/help_activity.xml" target-dir="res/layout" />
+
+        <!-- fisiere =  database -->
+        <source-file src="src/android/database/interfaces/AxisData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database/interfaces" />
+        <source-file src="src/android/database/interfaces/LocationData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database/interfaces" />
+        <source-file src="src/android/database/interfaces/StringValueData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database/interfaces" />
+        <source-file src="src/android/database/interfaces/ValueData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database/interfaces" />
+        <source-file src="src/android/database/AccelerometerData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />
+        <source-file src="src/android/database/BatteryData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />     
+        <source-file src="src/android/database/ContextData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />
+        <source-file src="src/android/database/ForegroundApplicationData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />
+        <source-file src="src/android/database/GyroscopeData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />
+        <source-file src="src/android/database/LightData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />
+        <source-file src="src/android/database/LinearAccelerationData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />
+        <source-file src="src/android/database/LocationSensorData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />
+        <source-file src="src/android/database/MagneticFieldData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />
+        <source-file src="src/android/database/PressureData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />
+        <source-file src="src/android/database/ProximityData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />
+        <source-file src="src/android/database/SoundData.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/database" />
+        
+        <!-- fisiere =  disertatie -->
+        <source-file src="src/android/disertatie/BicycleEventsActivity.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/disertatie" />
+        <source-file src="src/android/disertatie/CarEventsActivity.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/disertatie" />
+        <source-file src="src/android/disertatie/EventActivity.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/disertatie" />
+        <source-file src="src/android/disertatie/EventsActivity.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/disertatie" />
+        <source-file src="src/android/disertatie/ListenerService.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/disertatie" />
+        <source-file src="src/android/disertatie/MainActivity.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/disertatie" />
+        <source-file src="src/android/disertatie/PedestrianEventsActivity.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/disertatie" />
+        <source-file src="src/android/disertatie/SettingsActivity.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/disertatie" />
+        <source-file src="src/android/disertatie/TransportEventsActivity.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/disertatie" />
+
+        <!-- fisiere =  helpers -->
+        <source-file src="src/android/helpers/HttpRequest.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/helpers" />
+        <source-file src="src/android/helpers/Setting.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/helpers" />
+        <source-file src="src/android/helpers/SoundMeter.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/helpers" />
+
+        <!-- fisiere =  listeners -->
+        <source-file src="src/android/listeners/BatteryLevel.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/listeners" />
+        <source-file src="src/android/listeners/CurrentLocationListener.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/listeners" />
+        <source-file src="src/android/listeners/SensorListener.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/listeners" />
+        <source-file src="src/android/listeners/WifiListener.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/listeners" />
+
+        <!-- fisiere =  tasks -->
+        <source-file src="src/android/tasks/BatteryWatcherTask.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/tasks" />
+        <source-file src="src/android/tasks/ForegroundAppWatcher.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/tasks" />
+        <source-file src="src/android/tasks/ListenerTask.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/tasks" />
+        <source-file src="src/android/tasks/LocationListenerTask.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/tasks" />
+        <source-file src="src/android/tasks/SaverTask.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/tasks" />
+        <source-file src="src/android/tasks/SenderTask.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/tasks" />
+        <source-file src="src/android/tasks/SensorListenerTask.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/tasks" />
+        <source-file src="src/android/tasks/SoundWatcherTask.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/tasks" />
+        
+        <!-- fisiere =  res.drawable  -->
+         <source-file src="src/android/res/drawable/blue.xml" target-dir="res/drawable" />
+         <source-file src="src/android/res/drawable/brown.xml" target-dir="res/drawable" />
+         <source-file src="src/android/res/drawable/green.xml" target-dir="res/drawable" />
+         <source-file src="src/android/res/drawable/orange.xml" target-dir="res/drawable" />
+         <source-file src="src/android/res/drawable/pink.xml" target-dir="res/drawable" />
+         <source-file src="src/android/res/drawable/purple.xml" target-dir="res/drawable" />
+         <source-file src="src/android/res/drawable/red.xml" target-dir="res/drawable" />
+         <source-file src="src/android/res/drawable/yellow.xml" target-dir="res/drawable" />
+        
+        <!-- fisiere =  res.drawable-hdpi   -->
+        <source-file src="src/android/res/drawable-hdpi/ic_launcher_bicycle.png" target-dir="res/drawable-hdpi" />
+        <source-file src="src/android/res/drawable-hdpi/ic_launcher_car.png" target-dir="res/drawable-hdpi" />
+        <source-file src="src/android/res/drawable-hdpi/ic_launcher_pedestrian.png" target-dir="res/drawable-hdpi" />
+        <source-file src="src/android/res/drawable-hdpi/ic_launcher_transport.png" target-dir="res/drawable-hdpi" />
+        <source-file src="src/android/res/drawable-hdpi/ic_launcher.png" target-dir="res/drawable-hdpi" />
+         
+        <!-- fisiere =  res.drawable-mdpi   -->
+        <source-file src="src/android/res/drawable-mdpi/ic_launcher_bicycle.png" target-dir="res/drawable-mdpi" />
+        <source-file src="src/android/res/drawable-mdpi/ic_launcher_car.png" target-dir="res/drawable-mdpi" />
+        <source-file src="src/android/res/drawable-mdpi/ic_launcher_pedestrian.png" target-dir="res/drawable-mdpi" />
+        <source-file src="src/android/res/drawable-mdpi/ic_launcher_transport.png" target-dir="res/drawable-mdpi" />
+        <source-file src="src/android/res/drawable-mdpi/ic_launcher.png" target-dir="res/drawable-mdpi" />
+        
+        <!-- fisiere =  res.drawable-xhdpi  -->
+        <source-file src="src/android/res/drawable-xhdpi/ic_launcher_bicycle.png" target-dir="res/drawable-xhdpi" />
+        <source-file src="src/android/res/drawable-xhdpi/ic_launcher_car.png" target-dir="res/drawable-xhdpi" />
+        <source-file src="src/android/res/drawable-xhdpi/ic_launcher_pedestrian.png" target-dir="res/drawable-xhdpi" />
+        <source-file src="src/android/res/drawable-xhdpi/ic_launcher_transport.png" target-dir="res/drawable-xhdpi" />
+        <source-file src="src/android/res/drawable-xhdpi/ic_launcher.png" target-dir="res/drawable-xhdpi" />
+       
+        <!-- fisiere =  res.drawable-xxhdpi -->
+        <source-file src="src/android/res/drawable-xxhdpi/ic_launcher_bicycle.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/ic_launcher_car.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/ic_launcher_pedestrian.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/ic_launcher_transport.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/ic_launcher.png" target-dir="res/drawable-xxhdpi" />
+        
+        <!-- fisiere =  res.layout -->
+        <source-file src="src/android/res/layout/activity_bicycle.xml" target-dir="res/layout" />
+        <source-file src="src/android/res/layout/activity_car_events.xml" target-dir="res/layout" />
+        <source-file src="src/android/res/layout/activity_events.xml" target-dir="res/layout" />
+        <source-file src="src/android/res/layout/activity_main.xml" target-dir="res/layout" />
+        <source-file src="src/android/res/layout/activity_pedestrian.xml" target-dir="res/layout" />
+        <source-file src="src/android/res/layout/activity_settings.xml" target-dir="res/layout" />
+        <source-file src="src/android/res/layout/activity_transport_events.xml" target-dir="res/layout" />
+        
+        <!-- fisiere =  res.menu -->
+        <source-file src="src/android/res/menu/bicycle.xml" target-dir="res/menu" />
+        <source-file src="src/android/res/menu/car_events.xml" target-dir="res/menu" />
+        <source-file src="src/android/res/menu/events.xml" target-dir="res/menu" />
+        <source-file src="src/android/res/menu/main.xml" target-dir="res/menu" />
+        <source-file src="src/android/res/menu/pedestrian.xml" target-dir="res/menu" />
+        <source-file src="src/android/res/menu/settings.xml" target-dir="res/menu" />
+        <source-file src="src/android/res/menu/transport_events.xml" target-dir="res/menu" />
+
+        <!-- fisiere =  res.values -->
+        <source-file src="src/android/res/values/colors.xml" target-dir="res/values" />
+        <source-file src="src/android/res/values/dimens.xml" target-dir="res/values" />
+        <source-file src="src/android/res/values/strings.xml" target-dir="res/values" />
+        <source-file src="src/android/res/values/styles.xml" target-dir="res/values" />
+
+        <!-- fisiere =  res.values-v11 -->
+        <source-file src="src/android/res/values-v11/styles.xml" target-dir="res/values-v11" />        
+        <!-- fisiere =  res.values-v14 -->
+        <source-file src="src/android/res/values-v14/styles.xml" target-dir="res/values-v14" />
+
+        <!-- fisiere =  res.values-w820dp -->
+        <source-file src="src/android/res/values-w820dp/styles.xml" target-dir="res/values-w820dp" />
+
+        <!-- fisiere =  libs / frameworks -->
+        <!-- maven dependencies -->
+        <framework src="com.android.support:support-v4:22.2.1"/>
+        <framework src="com.android.support:appCompat-v7:22.2.1"/>    
+        <!-- realm .jar file-->
+        <lib-file  src="src/android/libs/realm-0.82.0.jar" target-dir="libs">
+
+        <source-file src="src/android/libs/arm64-v8a/librealm-jni.so" target-dir="jniLibs/arm64-v8a" />
+        <source-file src="src/android/libs/armeabi/librealm-jni.so" target-dir="jniLibs/armeabi" />
+        <source-file src="src/android/libs/armeabi-v7a/librealm-jni.so" target-dir="jniLibs/armeabi-v7a" />
+        <source-file src="src/android/libs/mips/librealm-jni.so" target-dir="jniLibs/mips" />
+        <source-file src="src/android/libs/x86/librealm-jni.so" target-dir="jniLibs/x86" />
+
+
+
     </platform>
 </plugin>

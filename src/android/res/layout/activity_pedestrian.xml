@@ -1,0 +1,65 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/buttonPedestrianTrafficLight"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/red"
+            android:backgroundTint="@color/red"
+            android:text="Traffic light"
+            android:onClick="saveEvent"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+          <Button
+            android:id="@+id/buttonPedestrianPedestrianCrossing"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/blue"
+            android:backgroundTint="@color/blue"
+            android:text="Pedestrian crossing"
+            android:onClick="saveEvent"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+         <Button
+             android:id="@+id/buttonPedestrianExit"
+             android:layout_width="0dp"
+             android:layout_height="fill_parent"
+             android:layout_weight="1"
+             android:background="@color/black"
+             android:backgroundTint="@color/black"
+             android:text="Exit"
+             android:onClick="saveEvent"
+             android:textColor="@color/white"
+             android:textColorLink="@color/white"
+             android:textSize="@dimen/activity_vertical_margin" />
+
+    </TableRow>
+
+</TableLayout>
