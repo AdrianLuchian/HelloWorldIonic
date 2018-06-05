@@ -162,7 +162,6 @@
         <!-- fisiere =  res.values -->
         <resource-file src="src/android/res/values/colors.xml" target-dir="res/values" />
         <resource-file src="src/android/res/values/dimens.xml" target-dir="res/values" />
-        <resource-file src="src/android/res/values/strings.xml" target-dir="res/values" />
         <resource-file src="src/android/res/values/styles.xml" target-dir="res/values" />
 
         <!-- fisiere =  res.values-v11 -->
