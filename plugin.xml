@@ -104,73 +104,73 @@
         <source-file src="src/android/tasks/SoundWatcherTask.java" target-dir="src/cordova/plugin/helloWorld/helloWorld/tasks" />
         
         <!-- fisiere =  res.drawable  -->
-         <resource-file src="src/android/res/drawable/blue.xml" target="res/drawable" />
-         <resource-file src="src/android/res/drawable/brown.xml" target="res/drawable" />
-         <resource-file src="src/android/res/drawable/green.xml" target="res/drawable" />
-         <resource-file src="src/android/res/drawable/orange.xml" target="res/drawable" />
-         <resource-file src="src/android/res/drawable/pink.xml" target="res/drawable" />
-         <resource-file src="src/android/res/drawable/purple.xml" target="res/drawable" />
-         <resource-file src="src/android/res/drawable/red.xml" target="res/drawable" />
-         <resource-file src="src/android/res/drawable/yellow.xml" target="res/drawable" />
+         <resource-file src="src/android/res/drawable/blue.xml" target="res/drawable/blue.xml" />
+         <resource-file src="src/android/res/drawable/brown.xml" target="res/drawable/brown.xml" />
+         <resource-file src="src/android/res/drawable/green.xml" target="res/drawable/green.xml" />
+         <resource-file src="src/android/res/drawable/orange.xml" target="res/drawable/orange.xml" />
+         <resource-file src="src/android/res/drawable/pink.xml" target="res/drawable/pink.xml" />
+         <resource-file src="src/android/res/drawable/purple.xml" target="res/drawable/purple.xml" />
+         <resource-file src="src/android/res/drawable/red.xml" target="res/drawable/red.xml" />
+         <resource-file src="src/android/res/drawable/yellow.xml" target="res/drawable/yellow.xml" />
         
         <!-- fisiere =  res.drawable-hdpi   -->
-        <resource-file src="src/android/res/drawable-hdpi/ic_launcher_bicycle.png" target="res/drawable-hdpi" />
-        <resource-file src="src/android/res/drawable-hdpi/ic_launcher_car.png" target="res/drawable-hdpi" />
-        <resource-file src="src/android/res/drawable-hdpi/ic_launcher_pedestrian.png" target="res/drawable-hdpi" />
-        <resource-file src="src/android/res/drawable-hdpi/ic_launcher_transport.png" target="res/drawable-hdpi" />
-        <resource-file src="src/android/res/drawable-hdpi/ic_launcher.png" target="res/drawable-hdpi" />
+        <resource-file src="src/android/res/drawable-hdpi/ic_launcher_bicycle.png" target="res/drawable-hdpi/ic_launcher_bicycle.png" />
+        <resource-file src="src/android/res/drawable-hdpi/ic_launcher_car.png" target="res/drawable-hdpi/ic_launcher_car.png" />
+        <resource-file src="src/android/res/drawable-hdpi/ic_launcher_pedestrian.png" target="res/drawable-hdpi/ic_launcher_pedestrian.png" />
+        <resource-file src="src/android/res/drawable-hdpi/ic_launcher_transport.png" target="res/drawable-hdpi/ic_launcher_transport.png" />
+        <resource-file src="src/android/res/drawable-hdpi/ic_launcher.png" target="res/drawable-hdpi/ic_launcher.png" />
          
         <!-- fisiere =  res.drawable-mdpi   -->
-        <resource-file src="src/android/res/drawable-mdpi/ic_launcher_bicycle.png" target="res/drawable-mdpi" />
-        <resource-file src="src/android/res/drawable-mdpi/ic_launcher_car.png" target="res/drawable-mdpi" />
-        <resource-file src="src/android/res/drawable-mdpi/ic_launcher_pedestrian.png" target="res/drawable-mdpi" />
-        <resource-file src="src/android/res/drawable-mdpi/ic_launcher_transport.png" target="res/drawable-mdpi" />
-        <resource-file src="src/android/res/drawable-mdpi/ic_launcher.png" target="res/drawable-mdpi" />
+        <resource-file src="src/android/res/drawable-mdpi/ic_launcher_bicycle.png" target="res/drawable-mdpi/ic_launcher_bicycle.png" />
+        <resource-file src="src/android/res/drawable-mdpi/ic_launcher_car.png" target="res/drawable-mdpi/ic_launcher_car.png" />
+        <resource-file src="src/android/res/drawable-mdpi/ic_launcher_pedestrian.png" target="res/drawable-mdpi/ic_launcher_pedestrian.png" />
+        <resource-file src="src/android/res/drawable-mdpi/ic_launcher_transport.png" target="res/drawable-mdpi/ic_launcher_transport.png" />
+        <resource-file src="src/android/res/drawable-mdpi/ic_launcher.png" target="res/drawable-mdpi/ic_launcher.png" />
         
         <!-- fisiere =  res.drawable-xhdpi  -->
-        <resource-file src="src/android/res/drawable-xhdpi/ic_launcher_bicycle.png" target="res/drawable-xhdpi" />
-        <resource-file src="src/android/res/drawable-xhdpi/ic_launcher_car.png" target="res/drawable-xhdpi" />
-        <resource-file src="src/android/res/drawable-xhdpi/ic_launcher_pedestrian.png" target="res/drawable-xhdpi" />
-        <resource-file src="src/android/res/drawable-xhdpi/ic_launcher_transport.png" target="res/drawable-xhdpi" />
-        <resource-file src="src/android/res/drawable-xhdpi/ic_launcher.png" target="res/drawable-xhdpi" />
+        <resource-file src="src/android/res/drawable-xhdpi/ic_launcher_bicycle.png" target="res/drawable-xhdpi/ic_launcher_bicycle.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/ic_launcher_car.png" target="res/drawable-xhdpi/ic_launcher_car.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/ic_launcher_pedestrian.png" target="res/drawable-xhdpi/ic_launcher_pedestrian.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/ic_launcher_transport.png" target="res/drawable-xhdpi/ic_launcher_transport.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/ic_launcher.png" target="res/drawable-xhdpi/ic_launcher.png" />
        
         <!-- fisiere =  res.drawable-xxhdpi -->
-        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher_bicycle.png" target="res/drawable-xxhdpi" />
-        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher_car.png" target="res/drawable-xxhdpi" />
-        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher_pedestrian.png" target="res/drawable-xxhdpi" />
-        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher_transport.png" target="res/drawable-xxhdpi" />
-        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher.png" target-dir="res/drawable-xxhdpi" />
+        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher_bicycle.png" target="res/drawable-xxhdpi/ic_launcher_bicycle.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher_car.png" target="res/drawable-xxhdpi/ic_launcher_car.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher_pedestrian.png" target="res/drawable-xxhdpi/ic_launcher_pedestrian.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher_transport.png" target="res/drawable-xxhdpi/ic_launcher_transport.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher.png" target-dir="res/drawable-xxhdpi/ic_launcher.png" />
         
         <!-- fisiere =  res.layout -->
-        <resource-file src="src/android/res/layout/activity_bicycle.xml" target="res/layout" />
-        <resource-file src="src/android/res/layout/activity_car_events.xml" target="res/layout" />
-        <resource-file src="src/android/res/layout/activity_events.xml" target="res/layout" />
-        <resource-file src="src/android/res/layout/activity_main.xml" target="res/layout" />
-        <resource-file src="src/android/res/layout/activity_pedestrian.xml" target="res/layout" />
-        <resource-file src="src/android/res/layout/activity_settings.xml" target="res/layout" />
-        <resource-file src="src/android/res/layout/activity_transport_events.xml" target="res/layout" />
+        <resource-file src="src/android/res/layout/activity_bicycle.xml" target="res/layout/activity_bicycle.xml" />
+        <resource-file src="src/android/res/layout/activity_car_events.xml" target="res/layout/activity_car_events.xml" />
+        <resource-file src="src/android/res/layout/activity_events.xml" target="res/layout/activity_events.xml" />
+        <resource-file src="src/android/res/layout/activity_main.xml" target="res/layout/activity_main.xml" />
+        <resource-file src="src/android/res/layout/activity_pedestrian.xml" target="res/layout/activity_pedestrian.xml" />
+        <resource-file src="src/android/res/layout/activity_settings.xml" target="res/layout/activity_settings.xml" />
+        <resource-file src="src/android/res/layout/activity_transport_events.xml" target="res/layout/activity_transport_events.xml" />
         
         <!-- fisiere =  res.menu -->
-        <resource-file src="src/android/res/menu/bicycle.xml" target="res/menu" />
-        <resource-file src="src/android/res/menu/car_events.xml" target="res/menu" />
-        <resource-file src="src/android/res/menu/events.xml" target="res/menu" />
-        <resource-file src="src/android/res/menu/main.xml" target="res/menu" />
-        <resource-file src="src/android/res/menu/pedestrian.xml" target="res/menu" />
-        <resource-file src="src/android/res/menu/settings.xml" target="res/menu" />
-        <resource-file src="src/android/res/menu/transport_events.xml" target="res/menu" />
+        <resource-file src="src/android/res/menu/bicycle.xml" target="res/menu/bicycle.xml" />
+        <resource-file src="src/android/res/menu/car_events.xml" target="res/menu/car_events.xml" />
+        <resource-file src="src/android/res/menu/events.xml" target="res/menu/events.xml" />
+        <resource-file src="src/android/res/menu/main.xml" target="res/menu/main.xml" />
+        <resource-file src="src/android/res/menu/pedestrian.xml" target="res/menu/pedestrian.xml" />
+        <resource-file src="src/android/res/menu/settings.xml" target="res/menu/settings.xml" />
+        <resource-file src="src/android/res/menu/transport_events.xml" target="res/menu/transport_events.xml" />
 
         <!-- fisiere =  res.values -->
-        <resource-file src="src/android/res/values/colors.xml" target="res/values" />
-        <resource-file src="src/android/res/values/dimens.xml" target="res/values" />
-        <resource-file src="src/android/res/values/styles.xml" target="res/values" />
+        <resource-file src="src/android/res/values/colors.xml" target="res/values/colors.xml" />
+        <resource-file src="src/android/res/values/dimens.xml" target="res/values/dimens.xml" />
+        <resource-file src="src/android/res/values/styles.xml" target="res/values/styles.xml" />
 
         <!-- fisiere =  res.values-v11 -->
-        <resource-file src="src/android/res/values-v11/styles.xml" target="res/values-v11" />        
+        <resource-file src="src/android/res/values-v11/styles.xml" target="res/values-v11/styles.xml" />        
         <!-- fisiere =  res.values-v14 -->
-        <resource-file src="src/android/res/values-v14/styles.xml" target="res/values-v14" />
+        <resource-file src="src/android/res/values-v14/styles.xml" target="res/values-v14/styles.xml" />
 
         <!-- fisiere =  res.values-w820dp -->
-        <resource-file src="src/android/res/values-w820dp/dimens.xml" target="res/values-w820dp" />
+        <resource-file src="src/android/res/values-w820dp/dimens.xml" target="res/values-w820dp/dimens.xml" />
 
         <!-- fisiere =  libs / frameworks -->
         <!-- maven dependencies -->
