@@ -139,7 +139,7 @@
         <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher_car.png" target="res/drawable-xxhdpi/ic_launcher_car.png" />
         <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher_pedestrian.png" target="res/drawable-xxhdpi/ic_launcher_pedestrian.png" />
         <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher_transport.png" target="res/drawable-xxhdpi/ic_launcher_transport.png" />
-        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher.png" target-dir="res/drawable-xxhdpi/ic_launcher.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/ic_launcher.png" target="res/drawable-xxhdpi/ic_launcher.png" />
         
         <!-- fisiere =  res.layout -->
         <resource-file src="src/android/res/layout/activity_bicycle.xml" target="res/layout/activity_bicycle.xml" />
