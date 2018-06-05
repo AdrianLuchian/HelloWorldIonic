@@ -4,14 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import io.ionic.starter.R;
 
-public class TransportEventsActivity extends EventActivity {
+public class TransportEventsActivity extends cordova.plugin.helloWorld.disertatie.EventActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_transport_events);
 	}
-	
+
 	public String getEventName( int buttonId ) {
 		switch( buttonId ) {
 			case R.id.buttonTransportTrafficLight:

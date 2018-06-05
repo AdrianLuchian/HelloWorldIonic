@@ -4,14 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import io.ionic.starter.R;
 
-public class BicycleEventsActivity extends EventActivity {
+public class BicycleEventsActivity extends cordova.plugin.helloWorld.disertatie.EventActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_bicycle);
 	}
-	
+
 	public String getEventName( int buttonId ) {
 		switch( buttonId ) {
 			case R.id.buttonBicycleTrafficLight:

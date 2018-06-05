@@ -6,7 +6,7 @@ import cordova.plugin.helloWorld.helpers.SoundMeter;
 
 import android.os.AsyncTask;
 
-public class SoundWatcherTask extends ListenerTask {
+public class SoundWatcherTask extends cordova.plugin.helloWorld.tasks.ListenerTask {
 
 	private int time;
 	@SuppressWarnings("unchecked")
@@ -23,25 +23,25 @@ public class SoundWatcherTask extends ListenerTask {
 				sound.getAmplitude();
 				Thread.sleep(100);
 				SoundData s = new SoundData();
-				
+
 				s.setTimestamp(System.currentTimeMillis());
 				level = sound.getAmplitude();
 				s.setValue( (float) level );
 				addData(s);
 				sound.stop();
-				
+
 				elapsed_time += System.currentTimeMillis() - previous_timestamp;
 				previous_timestamp = System.currentTimeMillis();
 				Thread.sleep( time - 100 );
 			} catch( Exception e) {}
-			
+
 			if( elapsed_time > 10000 ) {
-				SaverTask saver = new SaverTask();
+				cordova.plugin.helloWorld.tasks.SaverTask saver = new cordova.plugin.helloWorld.tasks.SaverTask();
 				saver.executeOnExecutor( ListenerService.__instance.saverPool, sensorData );
 				elapsed_time = 0;
 			}
 		} while( ListenerService.__instance != null && ListenerService.__instance.isRunning() );
-		
+
 		return null;
 	}
 

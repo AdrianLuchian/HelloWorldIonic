@@ -10,7 +10,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.AsyncTask;
 
-public class ForegroundAppWatcher extends ListenerTask {
+public class ForegroundAppWatcher extends cordova.plugin.helloWorld.tasks.ListenerTask {
 
 	private int time;
 	private void getForegroudApp() {
@@ -34,11 +34,11 @@ public class ForegroundAppWatcher extends ListenerTask {
 	@SuppressWarnings("unchecked")
 	@Override
 	protected Void doInBackground(Integer... params) {
-		
+
 		time = params[0];
 		int elapsed_time = 0;
 		long previous_timestamp = System.currentTimeMillis();
-		
+
 		do {
 			try {
 				Thread.sleep(time);
@@ -46,15 +46,15 @@ public class ForegroundAppWatcher extends ListenerTask {
 				elapsed_time += System.currentTimeMillis() - previous_timestamp;
 				previous_timestamp = System.currentTimeMillis();
 			} catch( Exception e) {}
-			
+
 			if( elapsed_time > 10000 ) {
-				SaverTask saver = new SaverTask();
+				cordova.plugin.helloWorld.tasks.SaverTask saver = new cordova.plugin.helloWorld.tasks.SaverTask();
 				saver.executeOnExecutor( ListenerService.__instance.saverPool, sensorData );
 				elapsed_time = 0;
 			}
-			
+
 		} while( ListenerService.__instance != null && ListenerService.__instance.isRunning() );
-		
+
 		return null;
 	}
 }

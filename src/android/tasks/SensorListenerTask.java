@@ -10,11 +10,11 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.AsyncTask;
 
-public class SensorListenerTask extends ListenerTask {
+public class SensorListenerTask extends cordova.plugin.helloWorld.tasks.ListenerTask {
 
 	private int sensor;
 	private int time;
-	
+
 	@SuppressWarnings("unchecked")
 	@Override
 	protected Void doInBackground(Integer... params) {
@@ -26,19 +26,19 @@ public class SensorListenerTask extends ListenerTask {
 
 		SensorEventListener listener = new SensorListener( this, MainActivity.sensorClasses[sensor] );
 		mSensorManager.registerListener(listener, s, time * 1000);
-		
+
 		while( ListenerService.__instance != null && ListenerService.__instance.isRunning() ) {
 			try {
 				Thread.sleep(10000);
 			} catch( InterruptedException e ) {
 				mSensorManager.unregisterListener(listener);
-				
+
 			}
-			
-			SaverTask saver = new SaverTask();
+
+			cordova.plugin.helloWorld.tasks.SaverTask saver = new cordova.plugin.helloWorld.tasks.SaverTask();
 			saver.executeOnExecutor( ListenerService.__instance.saverPool, sensorData );
 		}
-		
+
 		mSensorManager.unregisterListener(listener);
 		return null;
 	}

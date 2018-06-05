@@ -61,17 +61,17 @@ public class MainActivity extends Activity {
 		SoundData.class,
 		ContextData.class
 	};
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 		settings = getSharedPreferences("SensorSettings", MODE_PRIVATE);
-		
+
 		LinearLayout l;
-		l = (LinearLayout) findViewById(R.id.linear_layout);	
-		
+		l = (LinearLayout) findViewById(R.id.linear_layout);
+
 		final Button startButton = new Button(this);
 		startButton.setText("Start");
 		final Button stopButton = new Button(this);
@@ -92,57 +92,57 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
             	Intent intent;
             	String sett = settings.getString("current-state", "");
-            	intent = new Intent(MainActivity.this, EventsActivity.class);
+            	intent = new Intent(MainActivity.this, cordova.plugin.helloWorld.disertatie.EventsActivity.class);
             	if( sett.equals("car") )
-            		intent = new Intent(MainActivity.this, CarEventsActivity.class );
+            		intent = new Intent(MainActivity.this, cordova.plugin.helloWorld.disertatie.CarEventsActivity.class );
             	if( sett.equals("transport") )
-        			intent = new Intent(MainActivity.this, TransportEventsActivity.class);
+        			intent = new Intent(MainActivity.this, cordova.plugin.helloWorld.disertatie.TransportEventsActivity.class);
         		if( sett.equals("bicycle") )
-        			intent = new Intent(MainActivity.this, BicycleEventsActivity.class);
+        			intent = new Intent(MainActivity.this, cordova.plugin.helloWorld.disertatie.BicycleEventsActivity.class);
         		if( sett.equals("pedestrian") )
-        			intent = new Intent(MainActivity.this, PedestrianEventsActivity.class);
-            	
+        			intent = new Intent(MainActivity.this, cordova.plugin.helloWorld.disertatie.PedestrianEventsActivity.class);
+
                 startActivity(intent);
             }
         });
         startButton.setOnClickListener(new View.OnClickListener() {
- 
+
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                startService(new Intent(MainActivity.this, ListenerService.class));
+                startService(new Intent(MainActivity.this, cordova.plugin.helloWorld.disertatie.ListenerService.class));
                 stopButton.setVisibility(View.VISIBLE);
                 eventsButton.setVisibility(View.VISIBLE);
     			startButton.setVisibility(View.GONE);
     			//sendButton.setVisibility(View.INVISIBLE);
-    			
-    			Intent intent = new Intent(MainActivity.this, EventsActivity.class);
+
+    			Intent intent = new Intent(MainActivity.this, cordova.plugin.helloWorld.disertatie.EventsActivity.class);
                 startActivity(intent);
             }
         });
         stopButton.setOnClickListener(new View.OnClickListener() {
- 
+
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                stopService(new Intent(MainActivity.this, ListenerService.class));
+                stopService(new Intent(MainActivity.this, cordova.plugin.helloWorld.disertatie.ListenerService.class));
                 startButton.setVisibility(View.VISIBLE);
                 eventsButton.setVisibility(View.GONE);
     			stopButton.setVisibility(View.GONE);
     			//sendButton.setVisibility(View.VISIBLE);
             }
         });
-        
-        settingsButton.setOnClickListener(new View.OnClickListener() { 
+
+        settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            	Intent intent = new Intent(MainActivity.this, cordova.plugin.helloWorld.disertatie.SettingsActivity.class);
                 startActivity(intent);
             }
         });
-        
-        
-       
+
+
+
         sendButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -164,7 +164,7 @@ public class MainActivity extends Activity {
             	}
             }
         });
-		if( ! this.isMyServiceRunning(ListenerService.class) ) {
+		if( ! this.isMyServiceRunning(cordova.plugin.helloWorld.disertatie.ListenerService.class) ) {
 			startButton.setVisibility(View.VISIBLE);
 			eventsButton.setVisibility(View.GONE);
 			stopButton.setVisibility(View.GONE);
@@ -175,10 +175,10 @@ public class MainActivity extends Activity {
 			startButton.setVisibility(View.GONE);
 			//sendButton.setVisibility(View.VISIBLE);
 		}
-		
+
 		createContextField( "Current context", 103, "context", l );
 	}
-	
+
 	void createContextField( String name, int textId, final String settingName, LinearLayout l ) {
 		final TextView text = new TextView(this);
 		text.setEms(10);
@@ -187,16 +187,16 @@ public class MainActivity extends Activity {
 		final EditText field = new EditText(this);
 		field.setEms(10);
 
-		
+
 		Button button = new Button(this);
 		button.setText("Send");
-		
+
 		button.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				CharSequence s = field.getText();
 				String value = s.toString();
-				
+
 				Realm realm = Realm.getInstance(MainActivity.this);
 				ContextData c = new ContextData();
 				c.setTimestamp(System.currentTimeMillis());
@@ -204,20 +204,20 @@ public class MainActivity extends Activity {
 				realm.beginTransaction();
 				realm.copyToRealm(c);
 				realm.commitTransaction();
-				
+
 				Toast toast = Toast.makeText( getApplicationContext(), "Context stored", Toast.LENGTH_SHORT);
 				toast.show();
 			}
 		});
-		
+
 		LinearLayout ls = new LinearLayout(this);
 		l.addView(text);
 		ls.addView(field);
 		ls.addView(button);
-	
+
 		l.addView(ls);
 	}
-	
+
 	private boolean isMyServiceRunning(Class<?> serviceClass) {
 	    ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
 	    for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {

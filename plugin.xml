@@ -178,13 +178,20 @@
         <framework src="com.android.support:appCompat-v7:22.2.1" />    
         <!-- realm .jar file-->
         <lib-file  src="src/android/libs/realm-0.82.0.jar" target-dir="libs" />
+        
 
-        <source-file src="src/android/libs/arm64-v8a/librealm-jni.so" target-dir="jniLibs/arm64-v8a" />
-        <source-file src="src/android/libs/armeabi/librealm-jni.so" target-dir="jniLibs/armeabi" />
-        <source-file src="src/android/libs/armeabi-v7a/librealm-jni.so" target-dir="jniLibs/armeabi-v7a" />
-        <source-file src="src/android/libs/mips/librealm-jni.so" target-dir="jniLibs/mips" />
-        <source-file src="src/android/libs/x86/librealm-jni.so" target-dir="jniLibs/x86" />
-
+        <!-- realm .so files --> 
+        <resource-file src="src/android/libs/arm64-v8a/librealm-jni.so" target="jniLibs/arm64-v8a/librealm-jni.so" />
+        <resource-file src="src/android/libs/armeabi/librealm-jni.so" target="jniLibs/armeabi/librealm-jni.so" />
+        <resource-file src="src/android/libs/armeabi-v7a/librealm-jni.so" target="jniLibs/armeabi-v7a/librealm-jni.so" />
+        <resource-file src="src/android/libs/mips/librealm-jni.so" target="jniLibs/mips/librealm-jni.so" />
+        <resource-file src="src/android/libs/x86/librealm-jni.so" target="jniLibs/x86/librealm-jni.so" />
+        <!-- duplicare -->
+        <lib-file src="src/android/libs/arm64-v8a/librealm-jni.so" />
+        <lib-file src="src/android/libs/armeabi/librealm-jni.so" />
+        <lib-file src="src/android/libs/armeabi-v7a/librealm-jni.so" />
+        <lib-file src="src/android/libs/mips/librealm-jni.so" />
+        <lib-file src="src/android/libs/x86/librealm-jni.so" />
 
 
     </platform>
